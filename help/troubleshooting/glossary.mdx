@@ -1,0 +1,83 @@
+---
+title: "Seama glossary"
+description: "Definitions for the job, invoice, inventory, bill and Xero terms used in Seama guidance."
+sidebarTitle: "Glossary"
+icon: "book-a"
+category: "Troubleshooting, FAQ and Glossary"
+subcategory: "Glossary"
+pageType: "Glossary"
+audience: ["All users"]
+prerequisites: []
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Documentation owner to assign"
+keywords: ["Quote", "Workorder", "Completed", "Pending Approval", "on hand", "committed", "available", "Ready", "DRAFT"]
+---
+
+## Jobs
+
+**Quote**  
+Proposed work that can be sent for a customer decision and converted to a Workorder.
+
+**Workorder**  
+The exact Seama label for active work. Also commonly searched as “work order.”
+
+**Completed**  
+A job state indicating operational work has been marked complete. It does not itself prove invoice approval, payment or Xero sync.
+
+**Cancelled**  
+A job state for work that will not proceed.
+
+**Booking**  
+A scheduled period with date, time, duration and staff. Booking staff can differ from the job's **Assigned To** value.
+
+**Queue**  
+A configured grouping used to organise jobs for operational handling.
+
+**Job type**  
+A configured classification used in job creation, filters and reporting.
+
+## Invoices and Xero
+
+**Pending Approval**  
+An invoice workflow state indicating approval has not been completed. A paid invoice may still appear here.
+
+**Pending Payment**  
+An invoice collection state or view for balances awaiting payment. Confirm the exact inclusion rules in the current product.
+
+**Not synced**  
+Seama does not show a completed Xero submission for the record. Search Xero before retrying if a previous attempt may have partially succeeded.
+
+**DRAFT**  
+A Xero status returned to Seama for tested supplier bills. Verify the actual record directly in Xero.
+
+## Inventory
+
+**On hand**  
+Physical quantity recorded at a stock location.
+
+**Committed**  
+Quantity reserved by active work, including items added to a Workorder.
+
+**Available**  
+Quantity not committed. In the tested records, it matched on hand minus committed.
+
+**Composite item**  
+A packaged item that expands to component items and quantities when used.
+
+## Bills and documents
+
+**Inbox**  
+The entry area for supplier documents received by supported paths.
+
+**To Review**  
+A document awaiting human validation and required decisions.
+
+**Ready**  
+A document that a reviewer has prepared for the next workflow step. It does not itself mean the bill is synced to Xero.
+
+**Archive**  
+The area for documents no longer active in the main processing views.
+
+**OCR**  
+Automated extraction of text and values from a document image. It can be wrong and must be checked against the source.

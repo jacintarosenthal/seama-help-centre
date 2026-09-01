@@ -1,0 +1,42 @@
+---
+title: "Record a payment against an invoice"
+description: "Add partial or final payment amounts and verify paid, outstanding, approval and Xero states separately."
+sidebarTitle: "Record a payment"
+icon: "badge-dollar-sign"
+category: "Quotes, Invoices and Payments"
+subcategory: "Payment and collections"
+pageType: "How-to"
+audience: ["Accounts staff", "Owner", "Administrator"]
+prerequisites: ["Payment-entry permission", "An existing invoice", "Confirmed payment date, method and amount"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Finance owner to assign"
+keywords: ["record payment", "partial payment", "mark invoice paid", "outstanding balance"]
+relatedPages: ["/help/invoices/invoice-lifecycle", "/help/integrations/xero-state-boundaries"]
+---
+
+import VerifiedWeb from '/snippets/verified-web.mdx';
+
+<VerifiedWeb />
+
+<Steps>
+  <Step title="Open the correct invoice">
+    Confirm the invoice number, client and total before entering payment information.
+  </Step>
+  <Step title="Add the payment">
+    Enter the received amount and choose the actual payment method, such as **Bank Transfer** or **Card**. Add the payment date and reference when available.
+  </Step>
+  <Step title="Save and reconcile">
+    Confirm **Paid** increased by the saved amount and **Outstanding** decreased by the same amount.
+  </Step>
+  <Step title="Add any remaining payment separately">
+    For split payments, create one entry per actual receipt and payment method. Do not replace history with a single combined entry.
+  </Step>
+  <Step title="Check independent states">
+    After the balance reaches zero, separately inspect invoice approval and Xero sync status.
+  </Step>
+</Steps>
+
+## Result
+
+The payment history reflects the real receipts and the invoice balance is updated. A zero balance can coexist with **Pending Approval** or **Not synced**, so resolve those states through their own workflows.

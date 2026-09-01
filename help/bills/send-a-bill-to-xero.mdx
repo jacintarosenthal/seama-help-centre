@@ -1,0 +1,49 @@
+---
+title: "Send a Ready supplier bill to Xero"
+description: "Confirm supplier and account prerequisites, send once, and verify the draft bill in Xero before retrying."
+sidebarTitle: "Send a bill to Xero"
+icon: "send"
+category: "Suppliers and Bills"
+subcategory: "Xero for bills"
+pageType: "How-to"
+audience: ["Accounts staff", "Owner", "Administrator"]
+prerequisites: ["A reviewed Ready bill", "Matched supplier", "Persisted Xero account", "Healthy Xero connection"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-09-26"
+productAreaOwner: "Finance owner to assign"
+keywords: ["send bill to Xero", "Xero DRAFT", "Not synced", "account disappeared", "batch send"]
+relatedPages: ["/help/bills/upload-and-review-a-bill", "/help/integrations/xero-state-boundaries", "/help/troubleshooting/core-troubleshooting"]
+---
+
+import XeroBoundary from '/snippets/xero-boundary.mdx';
+
+<XeroBoundary />
+
+## Before you begin
+
+- The bill is **Ready** and still matches the source after reload.
+- The supplier is linked or created correctly.
+- The intended Xero account is selected and still present after reload.
+- The Xero connection does not show a relink warning.
+
+<Steps>
+  <Step title="Open the individual bill">
+    Use the bill record rather than assuming a batch action can complete missing supplier or account information. Controlled batch submission asked reviewers to open each bill.
+  </Step>
+  <Step title="Confirm required details">
+    Recheck supplier, account, tax, invoice number, dates, lines and total. If the account field is empty or has no options, stop and resolve integration health.
+  </Step>
+  <Step title="Send once">
+    Use the bill's Xero action and wait for completion. Reload before deciding whether it succeeded.
+  </Step>
+  <Step title="Review the refreshed status">
+    A successful controlled submission reloaded with Xero status **DRAFT** and an option to send again. Do not use that option without checking Xero first.
+  </Step>
+  <Step title="Verify directly in Xero">
+    Locate the bill and compare supplier, account, tax and totals with the source and Seama record.
+  </Step>
+</Steps>
+
+<Warning>
+  The audit confirmed Seama-side **DRAFT** status for two bills, but direct Xero-side inspection remained gated by an expired Xero session. Complete that verification before treating this article as fully approved for live accounting use.
+</Warning>

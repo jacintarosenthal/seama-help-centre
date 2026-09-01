@@ -1,0 +1,33 @@
+---
+title: "Inventory and composite items"
+description: "Manage goods, services, composite items, stock locations, transfers and adjustments."
+sidebarTitle: "Overview"
+icon: "boxes"
+category: "Inventory and Composite Items"
+pageType: "Category landing page"
+audience: ["Inventory staff", "Field staff", "Administrator"]
+prerequisites: ["Item and inventory access"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Inventory owner to assign"
+keywords: ["inventory", "items", "Goods", "Service", "composite", "stock location"]
+---
+
+Inventory records the items you buy, sell and consume. Stock locations, transfers and adjustments explain where quantities changed; Workorders can commit stock before invoice approval.
+
+<Columns cols={2}>
+  <Card title="Understand stock values" icon="calculator" href="/help/inventory/understand-stock-values" />
+  <Card title="Transfer stock" icon="truck" href="/help/inventory/transfer-stock" />
+  <Card title="Adjust stock" icon="list-plus" href="/help/inventory/adjust-stock" />
+  <Card title="Process bill lines into stock" icon="file-input" href="/help/bills/import-items-to-stock" />
+</Columns>
+
+## Item types
+
+- **Goods** can carry purchase cost, selling price, stock and reorder settings.
+- **Service** items represent non-stock work such as labour services.
+- **Composite items** package component items and can commit component stock when added to work.
+
+<Warning>
+  Do not reconcile stock from a single overview label. In testing, an overview value labelled **Stock on hand** matched available stock rather than the sum of location on-hand quantities.
+</Warning>

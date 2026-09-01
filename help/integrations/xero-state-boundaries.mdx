@@ -1,0 +1,46 @@
+---
+title: "Understand Seama and Xero state boundaries"
+description: "Distinguish invoice payment, Seama approval, Seama sync status and Xero lifecycle state."
+sidebarTitle: "Xero state boundaries"
+icon: "git-compare-arrows"
+category: "Xero and Integrations"
+subcategory: "Xero lifecycle"
+pageType: "Concept explanation"
+audience: ["Owner", "Accounts staff", "Administrator"]
+prerequisites: ["Knowledge of the configured Xero organisation and publish status"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-09-26"
+productAreaOwner: "Integrations owner to assign"
+keywords: ["Xero lifecycle", "DRAFT", "Pending Approval", "Pending Payment", "Not synced", "paid but pending"]
+relatedPages: ["/help/invoices/invoice-lifecycle", "/help/invoices/approve-and-send-to-xero", "/help/bills/send-a-bill-to-xero"]
+---
+
+import XeroBoundary from '/snippets/xero-boundary.mdx';
+
+<XeroBoundary />
+
+## Track each dimension separately
+
+| Dimension | Question to answer | Where to verify |
+| --- | --- | --- |
+| Seama content | Are identity, lines, tax, dates and totals correct? | Open the Seama record and source/job |
+| Seama workflow | Is the record To Review, Ready, Pending Approval or another state? | Seama status and queue |
+| Seama sync | Is it Not synced, DRAFT or another returned status? | Seama Xero status after reload |
+| Xero lifecycle | Does the record exist and is it Draft, approved, paid, voided or deleted? | Directly in the connected Xero organisation |
+| Payment | What was received and what remains outstanding? | Payment history and balance; reconcile with accounting policy |
+
+## What the audit established
+
+- Two individual supplier bills reloaded in Seama with Xero status **DRAFT**.
+- A batch of five bills did not submit because records needed supplier and account details.
+- Some bill account selections disappeared or returned with no options.
+- One invoice submission failed with **Error updating invoice bulk** and stayed **Not synced**.
+- One invoice became fully paid in Seama but remained **Pending Approval** and **Not synced**.
+
+## Still gated
+
+Direct Xero-side inspection of the submitted bills, invoice approval, payment reconciliation, and correction or voiding flows was not completed because the Xero browser session expired. Xero reconnect behavior also remains a controlled administrator decision.
+
+<Warning>
+  Never retry based only on an old Seama screen. Reload, search Xero for the record, and check integration health first.
+</Warning>

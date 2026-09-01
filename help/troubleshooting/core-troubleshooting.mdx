@@ -1,0 +1,74 @@
+---
+title: "Resolve common Seama problems"
+description: "Work through validated checks for missing jobs, assignment mismatches, map coordinates, stock values, bill totals and Xero sync."
+sidebarTitle: "Core troubleshooting"
+icon: "wrench"
+category: "Troubleshooting, FAQ and Glossary"
+subcategory: "Core troubleshooting"
+pageType: "Troubleshooting"
+audience: ["All users"]
+prerequisites: ["The affected record ID", "Permission to view the relevant area"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-09-26"
+productAreaOwner: "Support owner to assign"
+keywords: ["My Jobs missing", "Assigned To", "map coordinates", "stock mismatch", "Not synced", "Xero error", "bill total changed"]
+relatedPages: ["/help/jobs/booking-vs-job-assignment", "/help/inventory/understand-stock-values", "/help/bills/corrected-totals-changed"]
+---
+
+## A job is missing from My Jobs
+
+1. Search by job number in **All Jobs**.
+2. Clear date, job type, status, staff and queue filters.
+3. Open the job and inspect **Assigned To**.
+4. Check whether the user only appears on a booking.
+5. Review the user's job permissions.
+
+## Booking staff and Assigned To disagree
+
+A booking's staff and the job-level **Assigned To** field behaved independently in testing. Review and correct the field your workflow relies on. Do not delete a valid booking solely because the header says **Not assigned**.
+
+## An address has no map coordinates
+
+1. Edit the client or site address.
+2. Start typing the address and select the correct geocoded suggestion.
+3. Save and reload the record.
+4. Reopen the job or map view.
+
+A typed address can save as text without coordinates.
+
+## Time was saved to the wrong staff member or type
+
+Open the time entry and check all selected staff plus **Job** versus **Travel**. The dialog retained previous selections in testing. Correct or remove the entry according to permissions, then verify job totals and the staff timesheet.
+
+## On hand, committed and available disagree
+
+Reconcile location-level on hand, active job commitment, received transfers, adjustments and bill imports. The item overview's **Stock on hand** label matched available stock in the tested scenario, so prefer location detail for the audit.
+
+## A transfer still shows in transit
+
+Check whether receipt confirmation is required. Open the transfer, confirm destination receipt, reload, and verify the destination quantity. Ignore a generic “completed” toast when the transaction status still requires receipt.
+
+## A stock adjustment did not apply
+
+Use **Adjustment amount** rather than relying on **Actual counted quantity**, which did not persist in testing. Save, reload, and confirm the location quantity and transaction record.
+
+## A corrected bill total changed after reload
+
+Keep the bill in **To Review** and stop inventory or Xero actions. Compare the source net, tax and total, inspect adjustments that may have been applied twice, save once, reload and compare again. See [the full recovery procedure](/help/bills/corrected-totals-changed).
+
+## An invoice or bill is Not synced
+
+1. Reload and record the current Seama and Xero statuses.
+2. Confirm the connected Xero organisation and whether Seama requests a relink.
+3. Check required client or supplier, account, tax, number, date and total details.
+4. Search directly in Xero for the record before retrying.
+5. If the account field disappeared or has no options, stop and restore integration health.
+6. Retry only after you know no duplicate exists.
+
+## Report totals differ
+
+Match date range, entity, status and revenue basis. Pending invoices contributed to outstanding balance but not paid revenue in testing. Document the definitions before reconciling widgets or exports.
+
+## If the issue continues
+
+Provide support with the record ID, user role, current and expected state, timestamp, reproduction steps, visible error text and a cropped screenshot with sensitive data removed.

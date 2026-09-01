@@ -1,0 +1,39 @@
+---
+title: "Adjust stock at a location"
+description: "Record a stock increase or decrease with a reason and verify the resulting location quantity."
+sidebarTitle: "Adjust stock"
+icon: "list-plus"
+category: "Inventory and Composite Items"
+subcategory: "Locations and stock movements"
+pageType: "How-to"
+audience: ["Inventory staff", "Administrator"]
+prerequisites: ["Stock-adjustment permission", "An item and stock location", "A documented reason"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Inventory owner to assign"
+keywords: ["stock adjustment", "actual counted quantity", "adjustment amount", "inventory correction"]
+relatedPages: ["/help/inventory/understand-stock-values", "/help/inventory/transfer-stock"]
+---
+
+import VerifiedWeb from '/snippets/verified-web.mdx';
+
+<VerifiedWeb />
+
+<Steps>
+  <Step title="Confirm the current location quantity">
+    Open the item and note the on-hand, committed and available values for the location you will change.
+  </Step>
+  <Step title="Start an adjustment">
+    Select the item and location, then enter a clear reason that explains the physical count or correction.
+  </Step>
+  <Step title="Enter the adjustment amount">
+    Use a positive amount to add stock or a negative amount to remove stock. Calculate it from the difference between the recorded and verified physical quantities.
+  </Step>
+  <Step title="Save and reload">
+    Save the adjustment, record its transaction number, reload the item and verify the new location quantity and transaction history.
+  </Step>
+</Steps>
+
+<Warning>
+  In controlled testing, **Actual counted quantity** did not persist during entry, while **Adjustment amount** did. Until retested, use the adjustment amount and verify the saved result after reload.
+</Warning>

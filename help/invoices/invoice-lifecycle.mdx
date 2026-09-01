@@ -1,0 +1,46 @@
+---
+title: "Understand the invoice lifecycle"
+description: "Follow an invoice from completed work through review, approval, Xero and payment without conflating its states."
+sidebarTitle: "Invoice lifecycle"
+icon: "git-branch"
+category: "Quotes, Invoices and Payments"
+subcategory: "Invoice lifecycle"
+pageType: "Workflow overview"
+audience: ["Accounts staff", "Owner", "Administrator"]
+prerequisites: ["Invoice access"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Finance owner to assign"
+keywords: ["invoice lifecycle", "Pending Approval", "Pending Payment", "paid but pending approval", "Not synced"]
+relatedPages: ["/help/invoices/approve-and-send-to-xero", "/help/invoices/record-a-payment", "/help/integrations/xero-state-boundaries"]
+---
+
+import VerifiedWeb from '/snippets/verified-web.mdx';
+
+<VerifiedWeb />
+
+```mermaid
+flowchart LR
+  A[Completed job] --> B[Create invoice]
+  B --> C[Review details, tax and due date]
+  C --> D[Approval decision]
+  D --> E[Xero submission when enabled]
+  B --> F[Payment recorded]
+  E --> G[Verify in Xero]
+  F --> H[Check Paid and Outstanding]
+```
+
+## Four separate questions
+
+1. **Is the invoice content correct?** Check products, services, composite lines, work-completed text, tax, payment terms, due date and total.
+2. **Is it approved?** Review the Seama invoice status or queue.
+3. **Did it sync?** Review the Xero status and verify the record in Xero.
+4. **Is it paid?** Review **Paid** and **Outstanding** values and the payment history.
+
+<Warning>
+  Controlled testing produced a fully paid invoice with **Outstanding $0.00** that still appeared in **Pending Approval** and remained **Not synced**. Reconcile each dimension independently.
+</Warning>
+
+## PDF preview
+
+The tested invoice PDF preview reported **Unable to load PDF preview**. If this occurs, do not assume the customer document is correct. Retry after reload, use the approved alternative review path, or escalate with the invoice ID before sending.

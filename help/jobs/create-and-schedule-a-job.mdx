@@ -1,0 +1,55 @@
+---
+title: "Create and schedule a job"
+description: "Create a Quote or Workorder, add customer and site context, and book staff for the work."
+sidebarTitle: "Create and schedule a job"
+icon: "calendar-plus"
+category: "Jobs, Tasks, Reminders and Queues"
+subcategory: "Job lifecycle and scheduling"
+pageType: "How-to"
+audience: ["Dispatcher", "Administrator"]
+prerequisites: ["Job create permission", "An existing client", "A site when work occurs away from the client address"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Jobs owner to assign"
+keywords: ["create job", "schedule job", "book technician", "Workorder", "work order"]
+relatedPages: ["/help/clients/add-a-client-site-and-contact", "/help/jobs/booking-vs-job-assignment", "/help/jobs/log-time-safely"]
+---
+
+import VerifiedWeb from '/snippets/verified-web.mdx';
+
+<VerifiedWeb />
+
+Create the job record first, then add a booking for when the work will occur.
+
+## Before you begin
+
+- Confirm the client, site and contact details.
+- Select a geocoded address suggestion if the job must appear correctly on maps.
+- Decide whether the job starts as a **Quote** or **Workorder**.
+
+<Steps>
+  <Step title="Create the job">
+    Open the jobs area and start a new job. Select the client and site, then enter the job title or description and required dates.
+  </Step>
+  <Step title="Choose the starting status and type">
+    Select **Quote** when approval is needed before work. Select **Workorder** for active work. Confirm the job type and queue if your organisation uses them.
+  </Step>
+  <Step title="Add operational context">
+    Add the site contact, job contacts, tasks or to-dos, a reminder and any internal notes needed by the team.
+  </Step>
+  <Step title="Create a booking">
+    Add the booking date, start time and duration. Select the staff member or members who should attend.
+  </Step>
+  <Step title="Save and verify">
+    Confirm the booking card shows the expected staff and time. Separately check the job header's **Assigned To** value and correct it if your workflow requires a job-level assignment.
+  </Step>
+</Steps>
+
+## Result
+
+The job is available in the relevant job list and has a booking for the planned work. Filter settings can hide it from some lists, so search by job number before recreating a missing record.
+
+## Troubleshooting
+
+- If the map cannot locate the job, reselect the address from the location suggestions rather than saving typed text alone.
+- If the booking has staff but **Assigned To** says **Not assigned**, see [booking assignment versus job assignment](/help/jobs/booking-vs-job-assignment).

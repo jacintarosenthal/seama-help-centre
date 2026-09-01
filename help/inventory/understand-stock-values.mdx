@@ -1,0 +1,44 @@
+---
+title: "Understand on hand, committed and available stock"
+description: "Reconcile Seama stock values across locations, active work and item overviews."
+sidebarTitle: "Understand stock values"
+icon: "calculator"
+category: "Inventory and Composite Items"
+subcategory: "Inventory concepts"
+pageType: "Concept explanation"
+audience: ["Inventory staff", "Administrator", "Accounts staff"]
+prerequisites: ["Inventory access"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Inventory owner to assign"
+keywords: ["on hand", "committed", "available", "Stock on hand", "inventory mismatch"]
+relatedPages: ["/help/inventory/transfer-stock", "/help/inventory/adjust-stock", "/help/troubleshooting/core-troubleshooting"]
+---
+
+import VerifiedWeb from '/snippets/verified-web.mdx';
+
+<VerifiedWeb />
+
+## Definitions
+
+- **On hand** — physical quantity recorded at a location.
+- **Committed** — quantity reserved by active work, including items used on a Workorder.
+- **Available** — quantity not committed to current work. In the tested records, this matched on hand minus committed.
+- **Reorder point** — the threshold used to identify low stock.
+
+## Reconcile a quantity
+
+1. Open the item and view quantities by location.
+2. Add the location-level on-hand values.
+3. Identify quantities committed to active jobs.
+4. Compare available with on hand minus committed.
+5. Review transfers, adjustments, bill imports and job consumption in transaction history.
+6. Reload before recording the final value.
+
+<Warning>
+  The item overview showed a value labelled **Stock on hand** that matched available stock in controlled testing. Use the location detail for reconciliation until the label is clarified or fixed.
+</Warning>
+
+## Composite items
+
+Adding a composite item to a job can expand to its component items and commit their stock. If the Composite Items transaction tab is empty, review the component items and job activity rather than assuming nothing changed.

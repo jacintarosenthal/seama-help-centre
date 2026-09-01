@@ -1,0 +1,45 @@
+---
+title: "Transfer stock between locations"
+description: "Move stock from one Seama location to another, confirm receipt when required, and verify destination quantities."
+sidebarTitle: "Transfer stock"
+icon: "truck"
+category: "Inventory and Composite Items"
+subcategory: "Locations and stock movements"
+pageType: "How-to"
+audience: ["Inventory staff", "Administrator"]
+prerequisites: ["Inventory transfer permission", "Source and destination locations", "Enough source stock"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Inventory owner to assign"
+keywords: ["stock transfer", "transfer in transit", "confirm receipt", "destination stock"]
+relatedPages: ["/help/inventory/understand-stock-values", "/help/inventory/adjust-stock"]
+---
+
+import VerifiedWeb from '/snippets/verified-web.mdx';
+import StaleState from '/snippets/stale-state.mdx';
+
+<VerifiedWeb />
+
+<Steps>
+  <Step title="Start the transfer">
+    Choose the source and destination locations, then add each item and quantity to move.
+  </Step>
+  <Step title="Review available stock">
+    Confirm the source can supply the requested quantity without consuming stock already committed to jobs.
+  </Step>
+  <Step title="Create the transfer">
+    Save the transfer and record its transaction number. If receipt confirmation is enabled, treat the stock as in transit until the destination accepts it.
+  </Step>
+  <Step title="Confirm receipt">
+    Open the transfer at the destination and confirm the received quantities. Investigate differences rather than accepting an incorrect quantity.
+  </Step>
+  <Step title="Reload and verify">
+    Reload the transfer and item. Confirm the status and the destination location's on-hand quantity.
+  </Step>
+</Steps>
+
+<StaleState />
+
+<Note>
+  The tested creation message said a transfer was “completed” even though it remained in transit and required receipt. Use the transaction status and destination quantity—not the success toast alone—to determine completion.
+</Note>

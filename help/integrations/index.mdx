@@ -1,0 +1,34 @@
+---
+title: "Xero and integrations"
+description: "Configure and monitor Seama's accounting boundary, understand tested Xero behavior and review other integration availability."
+sidebarTitle: "Overview"
+icon: "plug"
+category: "Xero and Integrations"
+pageType: "Category landing page"
+audience: ["Owner", "Accounts staff", "Administrator"]
+prerequisites: ["Integration settings access"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-09-26"
+productAreaOwner: "Integrations owner to assign"
+keywords: ["Xero", "integrations", "Draft", "relink Xero", "Stripe", "QuickBooks", "MYOB"]
+---
+
+Use the Xero integration as an explicit hand-off: review in Seama, submit once, then verify directly in Xero.
+
+<Columns cols={2}>
+  <Card title="Understand Xero state boundaries" icon="git-compare-arrows" href="/help/integrations/xero-state-boundaries" />
+  <Card title="Approve an invoice" icon="receipt-text" href="/help/invoices/approve-and-send-to-xero" />
+  <Card title="Send a supplier bill" icon="file-up" href="/help/bills/send-a-bill-to-xero" />
+  <Card title="Fix Not synced records" icon="triangle-alert" href="/help/troubleshooting/core-troubleshooting#an-invoice-or-bill-is-not-synced" />
+</Columns>
+
+## Tested Xero setup state
+
+- Xero was connected and enabled.
+- The organisation was configured to publish documents as **Draft**.
+- Integration settings later displayed **Please unlink your Xero account and link it again** instead of a selectable default payment account.
+- Unlinking was not performed because it is consequential and requires fresh authentication.
+
+## Other integrations
+
+The validated sitemap reserves reference pages for Stripe Payments, QuickBooks, Google Calendar, MYOB, Simpro, ServiceM8 import and Forms. Confirm current availability and behavior in the product before publishing setup instructions for any of them.

@@ -1,0 +1,46 @@
+---
+title: "Add a client, site and contact"
+description: "Create a customer record, add a service site and store the right contacts for jobs and billing."
+sidebarTitle: "Add client, site and contact"
+icon: "user-round-plus"
+category: "Clients, Sites and Contacts"
+subcategory: "Client records and sites"
+pageType: "How-to"
+audience: ["Administrator", "Dispatcher", "Accounts staff"]
+prerequisites: ["Client create permission", "Customer and billing information"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Clients owner to assign"
+keywords: ["add client", "add customer", "site address", "client contact", "billing contact"]
+relatedPages: ["/help/jobs/create-and-schedule-a-job", "/help/troubleshooting/core-troubleshooting#an-address-has-no-map-coordinates"]
+---
+
+import VerifiedWeb from '/snippets/verified-web.mdx';
+
+<VerifiedWeb />
+
+<Steps>
+  <Step title="Search for the client">
+    Search by name, email and other known identifiers. Update an existing record when it represents the same customer.
+  </Step>
+  <Step title="Create the client">
+    Add the client identity, general and billing details, email address and payment terms. Save and confirm the record is searchable.
+  </Step>
+  <Step title="Add a named site">
+    Add the service-site name and address. Choose an address suggestion rather than typing plain text when map coordinates matter.
+  </Step>
+  <Step title="Add client and site contacts">
+    Store the people responsible for client-wide, billing or site-specific communication in the appropriate record. Add their contact roles where available.
+  </Step>
+  <Step title="Verify on a test job">
+    Create or open a test job and confirm the client details, site address and contacts appear independently and correctly.
+  </Step>
+</Steps>
+
+## Result
+
+The job can use the correct client, job address and contact, while billing retains its own recipient and payment terms.
+
+<Note>
+  A saved text address can still display **Map coordinates not available**. If dispatch mapping is required, edit the site and select a geocoded suggestion.
+</Note>

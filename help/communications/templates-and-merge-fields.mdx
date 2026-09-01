@@ -1,0 +1,44 @@
+---
+title: "Create message templates and test merge fields"
+description: "Build email and SMS templates, use supported placeholders, preview the result and prevent unresolved text from reaching customers."
+sidebarTitle: "Templates and merge fields"
+icon: "braces"
+category: "Email, SMS and Announcements"
+subcategory: "Templates and merge fields"
+pageType: "How-to"
+audience: ["Administrator", "Dispatcher"]
+prerequisites: ["Template edit permission", "An authorised synthetic recipient for testing"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Communications owner to assign"
+keywords: ["email template", "SMS template", "merge fields", "job_no", "job_number", "unresolved merge field"]
+relatedPages: ["/help/communications/send-from-a-job", "/help/settings"]
+---
+
+import VerifiedWeb from '/snippets/verified-web.mdx';
+import SafeTestData from '/snippets/safe-test-data.mdx';
+
+<VerifiedWeb />
+<SafeTestData />
+
+<Steps>
+  <Step title="Create the template">
+    Choose email or SMS, give the template a clear task-based name, and write content that remains understandable if an optional field is missing.
+  </Step>
+  <Step title="Insert fields from the supported list">
+    Use the merge-field picker rather than guessing placeholder names. Controlled tests confirmed `{client_name}`, `{company_name}` for email, and `{job_number}`.
+  </Step>
+  <Step title="Preview from a synthetic job">
+    Open the template from a controlled job and check every placeholder in the draft. A raw token means the field did not resolve.
+  </Step>
+  <Step title="Check email subject and body">
+    Review both fields after reopening the editor. In testing, the list showed a saved subject while the editor loaded its subject box blank.
+  </Step>
+  <Step title="Send to an authorised destination">
+    Send the email or SMS only to a controlled recipient. Confirm email delivery or opened activity and the SMS acceptance result.
+  </Step>
+</Steps>
+
+<Warning>
+  Do not use `{job_no}`. It remained literal in both tested email and SMS drafts. Use `{job_number}` from the supported merge-field list.
+</Warning>

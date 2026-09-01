@@ -1,0 +1,47 @@
+---
+title: "Understand roles and permissions"
+description: "Use default and custom roles to control Seama access across operational, financial and administrative areas."
+sidebarTitle: "Roles and permissions"
+icon: "shield-check"
+category: "Staff, Roles and Security"
+subcategory: "Roles and permissions"
+pageType: "Feature reference"
+audience: ["Administrator", "Owner", "Security reviewer"]
+prerequisites: ["Role-management permission"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Security owner to assign"
+keywords: ["role permissions", "default role", "custom role", "page missing", "action missing"]
+relatedPages: ["/help/staff/add-staff-and-assign-a-role", "/help/troubleshooting/core-troubleshooting"]
+---
+
+import VerifiedWeb from '/snippets/verified-web.mdx';
+
+<VerifiedWeb />
+
+## Role types
+
+- **Default roles** provide a predefined permission set and were read-only in controlled testing.
+- **Custom roles** can be edited to match an organisation's responsibilities.
+
+## Permission areas to review
+
+- Dashboard and operational views
+- Jobs and job cards
+- Clients and invoices
+- Items, composites and inventory movements
+- Documents and bills
+- Staff, roles and organisation settings
+
+## Create or change a custom role
+
+1. Name the role for the responsibility, not a specific person.
+2. Start with only the permissions needed for the role's core tasks.
+3. Review create, edit, approve, delete, export and financial consequences separately.
+4. Save and assign the role to a synthetic test user.
+5. Sign in as that user and test expected and restricted actions.
+6. Obtain owner approval before assigning the role broadly.
+
+<Tip>
+  When a page or action is missing, compare the user's role with a working user's role before assuming the feature is unavailable.
+</Tip>

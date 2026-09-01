@@ -1,0 +1,53 @@
+---
+title: "Approve an invoice and send it to Xero"
+description: "Review the consequences of approval, submit only when integration prerequisites are healthy, and verify the result before retrying."
+sidebarTitle: "Approve and send to Xero"
+icon: "send"
+category: "Quotes, Invoices and Payments"
+subcategory: "Approval and Xero"
+pageType: "How-to"
+audience: ["Accounts staff", "Owner", "Administrator"]
+prerequisites: ["Invoice approval permission", "Connected and healthy Xero integration", "Correct Xero organisation and publish status"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-09-26"
+productAreaOwner: "Finance owner to assign"
+keywords: ["approve invoice", "send invoice to Xero", "Error updating invoice bulk", "Not synced"]
+relatedPages: ["/help/invoices/invoice-lifecycle", "/help/integrations/xero-state-boundaries", "/help/troubleshooting/core-troubleshooting"]
+---
+
+import XeroBoundary from '/snippets/xero-boundary.mdx';
+
+<XeroBoundary />
+
+## Before you begin
+
+- Confirm the invoice recipient, line items, quantities, prices, tax, due date and total.
+- Confirm the connected Xero organisation and intended publish status.
+- Resolve any Seama prompt asking you to unlink and reconnect Xero before processing live records.
+- Know whether the action will both approve and send the invoice.
+
+<Steps>
+  <Step title="Open the invoice">
+    Open the record from **Pending Approval** and verify its current Seama and Xero statuses.
+  </Step>
+  <Step title="Review the accounting detail">
+    Compare the invoice with the completed job and confirm tax, due date, account-related settings and customer details.
+  </Step>
+  <Step title="Confirm the consequence">
+    Read the confirmation message for **Send to Xero**. In the tested workflow, the action stated that it would approve and sync the invoice.
+  </Step>
+  <Step title="Submit once">
+    Confirm only when the integration is healthy. Wait for the result and reload the invoice before taking another action.
+  </Step>
+  <Step title="Verify in both systems">
+    Check the refreshed Xero status in Seama, then locate and validate the invoice directly in Xero. Confirm customer, lines, tax, total and Xero lifecycle state.
+  </Step>
+</Steps>
+
+## If submission fails
+
+The tested invoice returned **Error updating invoice bulk** and remained **Not synced**. Record the invoice ID and error, check integration health, and verify Xero for a partial or duplicate result before retrying.
+
+<Warning>
+  Direct Xero-side invoice verification was not completed in the 26 August 2026 audit because the browser session had expired. Treat this procedure as an operational safeguard, and obtain product-owner approval after completing the gated Xero test.
+</Warning>

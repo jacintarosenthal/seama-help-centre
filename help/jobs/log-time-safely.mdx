@@ -1,0 +1,46 @@
+---
+title: "Log job and travel time safely"
+description: "Record time against the correct job, staff member and time type, then verify labour totals."
+sidebarTitle: "Log time safely"
+icon: "clock"
+category: "Jobs, Tasks, Reminders and Queues"
+subcategory: "Time sheets"
+pageType: "How-to"
+audience: ["Field staff", "Dispatcher", "Administrator"]
+prerequisites: ["Time-entry access", "A job", "Staff labour rates when cost reporting is required"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Jobs owner to assign"
+keywords: ["timesheet", "job time", "travel time", "labour cost", "wrong staff"]
+relatedPages: ["/help/jobs/create-and-schedule-a-job", "/help/reports"]
+---
+
+import VerifiedWeb from '/snippets/verified-web.mdx';
+
+<VerifiedWeb />
+
+<Warning>
+  The tested time-entry dialog retained more than one selected staff member and a previous time type. Recheck both **Staff** and **Type** immediately before saving every entry.
+</Warning>
+
+<Steps>
+  <Step title="Open time entry from the job">
+    Start a time entry on the correct job and confirm the work date.
+  </Step>
+  <Step title="Choose staff deliberately">
+    Remove any staff who should not receive the entry, then select only the intended person or people.
+  </Step>
+  <Step title="Choose the time type">
+    Select **Job** for work time or **Travel** for travel time. Do not rely on the previously displayed value.
+  </Step>
+  <Step title="Enter duration and save">
+    Add the start and finish or duration required by the form. Review staff, type and duration one last time, then save.
+  </Step>
+  <Step title="Verify the result">
+    Check the job's total hours and the staff timesheet. If labour cost matters, confirm the entry used the expected staff labour rate.
+  </Step>
+</Steps>
+
+## Result
+
+The job separates job time and travel time, and the staff timesheet contains the entry for the intended person and date.

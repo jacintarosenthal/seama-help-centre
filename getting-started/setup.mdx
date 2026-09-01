@@ -1,0 +1,60 @@
+---
+title: "Set up Seama"
+description: "Configure your company, team, operational defaults, stock locations, imports and Xero connection in a safe order."
+sidebarTitle: "Set up your account"
+icon: "settings"
+category: "Getting Started"
+subcategory: "Set up Seama"
+pageType: "Getting Started step"
+audience: ["Administrator", "Owner", "Implementation lead"]
+prerequisites: ["Administrator access", "Confirmed company and billing details"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Implementation owner to assign"
+keywords: ["configure Seama", "company setup", "staff setup", "Xero setup"]
+relatedPages: ["/help/settings/configure-operations", "/help/staff/add-staff-and-assign-a-role", "/help/integrations"]
+---
+
+import SafeTestData from '/snippets/safe-test-data.mdx';
+
+Complete setup in this order so later records inherit the right defaults.
+
+<SafeTestData />
+
+<Steps>
+  <Step title="Complete profile and company details">
+    Add business identity and contact information, office location, billing email and company logo. Set each user's home location if it will be used for dispatch.
+  </Step>
+  <Step title="Secure administrator access">
+    Change temporary passwords and enable email two-step verification. Confirm which email address administrators can manage.
+  </Step>
+  <Step title="Add staff and roles">
+    Add each staff member, labour rate and emergency contact. Assign the least-privileged role that supports their work. Default roles are read-only; create a custom role when permissions need to change.
+
+    [Add staff and assign a role →](/help/staff/add-staff-and-assign-a-role)
+  </Step>
+  <Step title="Configure operations">
+    Choose the default job status, job types, queues, payment terms, markup bands, account and tax settings, stock locations, and job, email, SMS and document templates.
+
+    [Configure operations →](/help/settings/configure-operations)
+  </Step>
+  <Step title="Prepare data imports">
+    Clean and deduplicate clients, items and suppliers before import. Export existing data before a material migration change and review import results before users start work.
+  </Step>
+  <Step title="Connect Xero carefully">
+    Confirm the intended organisation, default account and publish status. Use controlled records for the first test and verify the result in Xero before processing live transactions.
+  </Step>
+</Steps>
+
+## Check your progress
+
+- Staff can sign in and see only the areas they need.
+- New jobs start in the intended default status.
+- Stock locations, payment terms, markup, accounts and tax rates are available.
+- Templates use tested merge fields and current business details.
+- Imported data is free of obvious duplicates.
+- The team knows that Seama and Xero states must be verified separately.
+
+## Next step
+
+[Complete your first workflow](/getting-started/first-workflow) with synthetic data.

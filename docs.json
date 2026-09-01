@@ -1,0 +1,166 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Seama Help Centre",
+  "description": "Set up Seama, run jobs, manage inventory and bills, and understand Xero workflow boundaries.",
+  "colors": {
+    "primary": "#16736F",
+    "light": "#3FA8A2",
+    "dark": "#16736F"
+  },
+  "logo": {
+    "light": "/images/seama-logo-light.svg",
+    "dark": "/images/seama-logo-dark.svg",
+    "href": "/"
+  },
+  "favicon": "/images/favicon.svg",
+  "icons": {
+    "library": "lucide"
+  },
+  "appearance": {
+    "default": "system",
+    "strict": false
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Home",
+        "icon": "house",
+        "pages": ["index"]
+      },
+      {
+        "tab": "Getting Started",
+        "icon": "rocket",
+        "groups": [
+          {
+            "group": "Welcome to Seama",
+            "pages": [
+              "getting-started/index",
+              "getting-started/workflow",
+              "getting-started/setup",
+              "getting-started/first-workflow",
+              "getting-started/go-live"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Help Centre",
+        "icon": "book-open",
+        "groups": [
+          {
+            "group": "Dashboard and Dispatch",
+            "icon": "layout-dashboard",
+            "pages": ["help/dashboard/index"]
+          },
+          {
+            "group": "Jobs, Tasks and Queues",
+            "icon": "briefcase-business",
+            "pages": [
+              "help/jobs/index",
+              "help/jobs/create-and-schedule-a-job",
+              "help/jobs/quote-to-workorder",
+              "help/jobs/log-time-safely",
+              "help/jobs/booking-vs-job-assignment"
+            ]
+          },
+          {
+            "group": "Clients, Sites and Contacts",
+            "icon": "users",
+            "pages": [
+              "help/clients/index",
+              "help/clients/add-a-client-site-and-contact"
+            ]
+          },
+          {
+            "group": "Quotes, Invoices and Payments",
+            "icon": "receipt-text",
+            "pages": [
+              "help/invoices/index",
+              "help/invoices/invoice-lifecycle",
+              "help/invoices/approve-and-send-to-xero",
+              "help/invoices/record-a-payment"
+            ]
+          },
+          {
+            "group": "Inventory and Composite Items",
+            "icon": "boxes",
+            "pages": [
+              "help/inventory/index",
+              "help/inventory/understand-stock-values",
+              "help/inventory/transfer-stock",
+              "help/inventory/adjust-stock"
+            ]
+          },
+          {
+            "group": "Suppliers and Bills",
+            "icon": "file-scan",
+            "pages": [
+              "help/bills/index",
+              "help/bills/upload-and-review-a-bill",
+              "help/bills/import-items-to-stock",
+              "help/bills/send-a-bill-to-xero",
+              "help/bills/corrected-totals-changed"
+            ]
+          },
+          {
+            "group": "Staff, Roles and Security",
+            "icon": "shield-user",
+            "pages": [
+              "help/staff/index",
+              "help/staff/add-staff-and-assign-a-role",
+              "help/staff/roles-and-permissions"
+            ]
+          },
+          {
+            "group": "Email, SMS and Announcements",
+            "icon": "messages-square",
+            "pages": [
+              "help/communications/index",
+              "help/communications/templates-and-merge-fields",
+              "help/communications/send-from-a-job"
+            ]
+          },
+          {
+            "group": "Templates and Settings",
+            "icon": "settings",
+            "pages": [
+              "help/settings/index",
+              "help/settings/configure-operations"
+            ]
+          },
+          {
+            "group": "Reports",
+            "icon": "chart-no-axes-combined",
+            "pages": ["help/reports/index"]
+          },
+          {
+            "group": "Xero and Integrations",
+            "icon": "plug",
+            "pages": [
+              "help/integrations/index",
+              "help/integrations/xero-state-boundaries"
+            ]
+          },
+          {
+            "group": "Profile, Company and Plans",
+            "icon": "building-2",
+            "pages": ["help/account/index"]
+          },
+          {
+            "group": "Troubleshooting and Glossary",
+            "icon": "life-buoy",
+            "pages": [
+              "help/troubleshooting/index",
+              "help/troubleshooting/core-troubleshooting",
+              "help/troubleshooting/glossary"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

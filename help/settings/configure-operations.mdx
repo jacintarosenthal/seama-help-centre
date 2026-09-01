@@ -1,0 +1,55 @@
+---
+title: "Configure Seama operations"
+description: "Set job defaults, queues, payment terms, markup, accounts, tax, stock locations and templates before live use."
+sidebarTitle: "Configure operations"
+icon: "sliders-horizontal"
+category: "Templates and Organisation Settings"
+subcategory: "Operations and finance settings"
+pageType: "Checklist"
+audience: ["Administrator", "Owner", "Accounts staff"]
+prerequisites: ["Settings permission", "Approved operational and accounting decisions"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Administration owner to assign"
+keywords: ["default job status", "job type", "queue", "payment terms", "markup band", "tax settings"]
+relatedPages: ["/getting-started/setup", "/help/inventory", "/help/communications/templates-and-merge-fields"]
+---
+
+Complete and test each applicable group before the first live job.
+
+## Jobs and workflow
+
+- [ ] Choose the intended default job status.
+- [ ] Create plain-language job types used by scheduling and reporting.
+- [ ] Create queues around real operational handling—not individual people.
+- [ ] Create and test repeatable job templates.
+
+## Finance
+
+- [ ] Set default customer payment terms.
+- [ ] Configure account codes and confirm Xero mappings.
+- [ ] Create and review invoice and receipt tax rates.
+- [ ] Choose approved default taxes.
+- [ ] Configure markup by cost band with finance approval.
+
+<Warning>
+  **Apply Markup** is a profit-pricing control, not a document correction. It changes displayed sell values immediately. Preserve the supplier cost, understand the configured band and review the recalculated sell value before saving.
+</Warning>
+
+## Inventory
+
+- [ ] Create stock locations with clear names.
+- [ ] Confirm opening stock and reorder points.
+- [ ] Test one transfer that requires receipt and one stock adjustment.
+- [ ] Reconcile on hand, committed and available values.
+
+## Communications and documents
+
+- [ ] Test email and SMS templates with synthetic jobs and recipients.
+- [ ] Use `{job_number}` rather than `{job_no}`.
+- [ ] Review Quote, Work Order and Invoice document templates.
+- [ ] Confirm bank details, accepted payment methods, terms and final notes.
+
+## Result
+
+New records inherit approved defaults, templates produce reviewed content, and the team understands every setting with financial or stock consequences.

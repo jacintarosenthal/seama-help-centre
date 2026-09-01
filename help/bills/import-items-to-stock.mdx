@@ -1,0 +1,42 @@
+---
+title: "Import supplier bill lines into stock"
+description: "Assign reviewed bill lines to a stock location, import them and verify the new quantities."
+sidebarTitle: "Import lines to stock"
+icon: "package-plus"
+category: "Suppliers and Bills"
+subcategory: "Assign and import bill lines"
+pageType: "How-to"
+audience: ["Inventory staff", "Accounts staff", "Administrator"]
+prerequisites: ["A reviewed supplier bill", "Correct item codes, descriptions, quantities and costs", "A destination stock location"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Inventory owner to assign"
+keywords: ["import bill items", "supplier invoice to inventory", "assign stock location", "locked imported rows"]
+relatedPages: ["/help/bills/upload-and-review-a-bill", "/help/inventory/understand-stock-values"]
+---
+
+import VerifiedWeb from '/snippets/verified-web.mdx';
+
+<VerifiedWeb />
+
+<Steps>
+  <Step title="Finish the bill review">
+    Confirm the supplier, line identity, quantity, purchase cost, tax and total against the source document.
+  </Step>
+  <Step title="Select the intended lines">
+    Select only the rows that should become or update inventory items. Keep job-specific or non-stock costs out of the selection.
+  </Step>
+  <Step title="Assign the destination">
+    Choose **Assign to Stock Location** and select the exact receiving location for each line. Use the separate **Assign to Job Card** destination for job costs.
+  </Step>
+  <Step title="Review before import">
+    Recheck item codes, descriptions, quantities and location. Imported rows became locked in controlled testing, so correct destination mistakes now.
+  </Step>
+  <Step title="Import and verify">
+    Run the import, reload the destination items and confirm their location-level on-hand quantities and transaction history.
+  </Step>
+</Steps>
+
+## Result
+
+The selected lines appear in inventory at the chosen location with the reviewed quantities. The bill's Xero status remains a separate workflow.

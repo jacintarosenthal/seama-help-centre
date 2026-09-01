@@ -1,0 +1,33 @@
+---
+title: "Understand booking staff and job assignment"
+description: "Learn why a booking can show a staff member while the job header still says Assigned To: Not assigned."
+sidebarTitle: "Booking vs assignment"
+icon: "users-round"
+category: "Jobs, Tasks, Reminders and Queues"
+subcategory: "Scheduling and bookings"
+pageType: "Concept explanation"
+audience: ["Dispatcher", "Administrator", "Field staff"]
+prerequisites: ["A job with a booking"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Jobs owner to assign"
+keywords: ["Assigned To Not assigned", "booking staff", "job assignment", "technician missing"]
+relatedPages: ["/help/jobs/create-and-schedule-a-job", "/help/troubleshooting/core-troubleshooting"]
+---
+
+import VerifiedWeb from '/snippets/verified-web.mdx';
+
+<VerifiedWeb />
+
+A booking answers “who is scheduled at this date and time?” The job header's **Assigned To** field represents job-level assignment. In the tested product, adding staff to a booking did not populate **Assigned To**.
+
+## What to check
+
+1. Open the booking and confirm its staff, date and time.
+2. Open the job header and check **Assigned To** separately.
+3. Set the job-level assignment if your **My Jobs**, reporting or operational workflow depends on it.
+4. Reload the job and confirm both values.
+
+<Warning>
+  Do not remove or recreate a valid booking just because **Assigned To** is empty. First identify which assignment your team actually needs to change.
+</Warning>

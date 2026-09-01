@@ -1,0 +1,46 @@
+---
+title: "Move a quote to a work order"
+description: "Prepare a Quote, send it for decision, and convert accepted work to a Workorder."
+sidebarTitle: "Quote to Workorder"
+icon: "file-forward"
+category: "Jobs, Tasks, Reminders and Queues"
+subcategory: "Quotes and work orders"
+pageType: "How-to"
+audience: ["Estimator", "Dispatcher", "Administrator"]
+prerequisites: ["Job and quote permissions", "A client record", "Products, services or descriptions for the proposed work"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Jobs owner to assign"
+keywords: ["quote", "quotation", "convert quote", "Workorder", "work order"]
+relatedPages: ["/help/jobs/create-and-schedule-a-job", "/help/invoices/invoice-lifecycle"]
+---
+
+import VerifiedWeb from '/snippets/verified-web.mdx';
+
+<VerifiedWeb />
+
+<Steps>
+  <Step title="Create the Quote">
+    Create a job with the **Quote** status. Confirm the client, site, contact and description of the proposed work.
+  </Step>
+  <Step title="Add quoted items">
+    Add products, services or composite items with the intended quantities, selling prices, tax and explanatory text.
+  </Step>
+  <Step title="Review the customer document">
+    Generate the Quote PDF or preview and check business details, recipient, scope, prices, tax, terms and final total before sending.
+  </Step>
+  <Step title="Send and record the decision">
+    Send the Quote through the approved communication path. Record the client's acceptance or decline using the current Seama controls.
+  </Step>
+  <Step title="Convert accepted work">
+    Convert the accepted Quote to a **Workorder**. Recheck status, job type, assignment, booking, tasks and item details before scheduling work.
+  </Step>
+</Steps>
+
+## Result
+
+The active job is a Workorder and retains the customer and proposed-work context needed for delivery.
+
+<Note>
+  Seama uses the interface label **Workorder**. Search metadata also includes “work order” so users can find the same guidance with either spelling.
+</Note>

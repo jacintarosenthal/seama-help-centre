@@ -1,0 +1,54 @@
+---
+title: "Complete your first Seama workflow"
+description: "Use synthetic data to test a client, job, booking, work, invoice, payment and supplier bill from end to end."
+sidebarTitle: "Complete the first workflow"
+icon: "play"
+category: "Getting Started"
+subcategory: "Complete your first workflow"
+pageType: "Getting Started step"
+audience: ["Administrator", "Dispatcher", "Accounts staff"]
+prerequisites: ["Core setup completed", "A staff user", "At least one stock location", "Safe synthetic test data"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Implementation owner to assign"
+keywords: ["first job", "test workflow", "job to invoice", "supplier bill test"]
+relatedPages: ["/help/clients/add-a-client-site-and-contact", "/help/jobs/create-and-schedule-a-job", "/help/bills/upload-and-review-a-bill"]
+---
+
+import SafeTestData from '/snippets/safe-test-data.mdx';
+import XeroBoundary from '/snippets/xero-boundary.mdx';
+
+<SafeTestData />
+
+Use one clearly labelled test record set and follow it from creation to verification.
+
+<Steps>
+  <Step title="Create the customer context">
+    Add a client, a named site and the relevant client and site contacts. Select a geocoded address suggestion when maps or dispatch coordinates matter.
+  </Step>
+  <Step title="Create and schedule work">
+    Create a Quote or Workorder, add a booking, choose staff, and add a task, reminder and note. Check booking assignment and the job's **Assigned To** field separately.
+  </Step>
+  <Step title="Add activity and costs">
+    Log job and travel time, rechecking both **Staff** and **Type** before saving. Add a goods item, service item or composite item and confirm expected stock commitment.
+  </Step>
+  <Step title="Complete and invoice">
+    Mark the Workorder complete, create the invoice, then check descriptions, quantities, tax, due date and total.
+  </Step>
+  <Step title="Test approval and payment states">
+    If Xero is healthy and the test is authorised, approve and send the invoice, then verify it in Xero. Record a controlled payment and confirm **Paid**, **Outstanding**, approval and Xero status independently.
+  </Step>
+  <Step title="Process a supplier bill">
+    Upload a synthetic bill, compare all extracted values with the source, choose destinations, save, reload, recheck totals, import controlled lines, and mark the bill **Ready**.
+  </Step>
+</Steps>
+
+<XeroBoundary />
+
+## Expected result
+
+You can trace the same synthetic scenario across customer, job, booking, time, stock, invoice, payment and bill records. Any mismatch is logged and resolved—or consciously accepted—before live use.
+
+## Next step
+
+Use the [go-live checklist](/getting-started/go-live).

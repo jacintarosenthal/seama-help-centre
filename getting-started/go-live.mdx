@@ -1,0 +1,66 @@
+---
+title: "Prepare Seama to go live"
+description: "Confirm configuration, staff access, data, finance, inventory, Xero and test-data handling before operational use."
+sidebarTitle: "Go-live checklist"
+icon: "list-checks"
+category: "Getting Started"
+subcategory: "Go live"
+pageType: "Checklist"
+audience: ["Owner", "Administrator", "Implementation lead"]
+prerequisites: ["Setup completed", "First workflow tested"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Implementation owner to assign"
+keywords: ["Seama go live", "launch checklist", "readiness checklist"]
+relatedPages: ["/getting-started/first-workflow", "/help/troubleshooting/core-troubleshooting"]
+---
+
+## Company and configuration
+
+- [ ] Business identity, ABN, emails, office location and logo are correct.
+- [ ] Default job status, job types, queues and payment terms match the operating process.
+- [ ] Markup bands, account codes and tax rates have finance approval.
+- [ ] Stock locations and document templates are ready.
+
+## Staff and security
+
+- [ ] Every active staff member can sign in.
+- [ ] Labour rates and emergency contacts are complete where required.
+- [ ] Default or custom roles grant only the permissions each person needs.
+- [ ] Two-step verification and account-recovery responsibilities are understood.
+
+## Data
+
+- [ ] Client, supplier and inventory imports were reviewed for duplicates.
+- [ ] Site addresses that need maps were selected from geocoded suggestions.
+- [ ] A pre-migration export is retained.
+- [ ] Synthetic test records are clearly labelled for retention or scheduled for safe removal.
+
+## Jobs, invoices and inventory
+
+- [ ] The team completed a Quote-to-Workorder-to-Completed test.
+- [ ] Booking assignment and job assignment are understood as separate fields.
+- [ ] Time-entry users know to recheck **Staff** and **Type** before saving.
+- [ ] On hand, committed and available stock values were reconciled.
+- [ ] A transfer was received and an adjustment was verified after reload.
+- [ ] Invoice approval, payment and Xero states were checked independently.
+
+## Bills and Xero
+
+- [ ] Bill reviewers compare supplier, number, dates, every line, tax and total with the source.
+- [ ] Reviewers save, reload and compare totals again before **Ready**.
+- [ ] Bill-line destinations are chosen before import locks rows.
+- [ ] The correct Xero organisation, default account and publish status are confirmed.
+- [ ] A controlled invoice and bill were verified in Xero before any retry.
+- [ ] The team knows what to do if Seama asks to unlink and reconnect Xero.
+
+## Team readiness
+
+- [ ] Administrators, dispatchers, field staff and accounts staff know their first-day tasks.
+- [ ] Help Centre links are shared in onboarding materials.
+- [ ] A product owner and documentation owner are assigned.
+- [ ] Support escalation includes record ID, visible status, expected result, timestamp and screenshot with sensitive data removed.
+
+<Tip>
+  Go live when every applicable check is complete and the accountable owner has accepted any documented exception.
+</Tip>

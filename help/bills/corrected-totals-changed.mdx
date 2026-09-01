@@ -1,0 +1,46 @@
+---
+title: "Correct supplier bill totals that change after saving"
+description: "Recover when a reviewed bill total looks right in preview but changes after save or reload."
+sidebarTitle: "Correct changed totals"
+icon: "triangle-alert"
+category: "Suppliers and Bills"
+subcategory: "Bill troubleshooting"
+pageType: "Troubleshooting"
+audience: ["Accounts staff", "Administrator"]
+prerequisites: ["The source document", "Bill edit permission", "The bill has not been sent to Xero"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-09-26"
+productAreaOwner: "Bills owner to assign"
+keywords: ["bill total changed", "GST adjustment", "wrong total after save", "OCR total"]
+relatedPages: ["/help/bills/upload-and-review-a-bill", "/help/bills/send-a-bill-to-xero"]
+---
+
+## Problem
+
+The bill preview matches the source, but the saved or reloaded total is different.
+
+## Likely cause
+
+The tested receipt correction applied a GST adjustment again after server normalisation. A preview showed **$29.64**, but reload showed **$3.33** until the adjustment was reset to zero.
+
+<Steps>
+  <Step title="Stop downstream actions">
+    Do not mark the bill **Ready**, import lines or send it to Xero while totals disagree.
+  </Step>
+  <Step title="Reopen the source comparison">
+    Record the authoritative net, tax and total from the source image.
+  </Step>
+  <Step title="Inspect tax and adjustment fields">
+    Look for a correction that duplicates a value Seama has already normalised. Reset or recalculate the adjustment only when the line and tax evidence supports it.
+  </Step>
+  <Step title="Save, reload and compare">
+    Save once, reload the bill, then compare net, tax and final total with the source again.
+  </Step>
+  <Step title="Escalate if it repeats">
+    Keep the bill in **To Review**. Provide the bill ID, source total, expected tax, before-and-after values, timestamp and redacted screenshots to support.
+  </Step>
+</Steps>
+
+<Warning>
+  Never “balance” the bill by changing a source value without evidence. The source document remains authoritative.
+</Warning>

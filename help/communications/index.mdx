@@ -1,0 +1,34 @@
+---
+title: "Email, SMS and announcements"
+description: "Communicate from jobs, reuse templates and merge fields, and understand delivery and allowance signals."
+sidebarTitle: "Overview"
+icon: "messages-square"
+category: "Email, SMS and Announcements"
+pageType: "Category landing page"
+audience: ["Dispatcher", "Field staff", "Administrator"]
+prerequisites: ["Communication permission", "Valid recipients"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-11-26"
+productAreaOwner: "Communications owner to assign"
+keywords: ["email", "SMS", "announcement", "merge field", "message template"]
+---
+
+Send customer communications from the relevant job so the message and delivery activity remain connected to the work.
+
+<Columns cols={2}>
+  <Card title="Use templates and merge fields" icon="braces" href="/help/communications/templates-and-merge-fields" />
+  <Card title="Send email or SMS from a job" icon="send" href="/help/communications/send-from-a-job" />
+</Columns>
+
+## Tested behavior
+
+- Email and SMS templates resolved `{client_name}`.
+- Email resolved `{company_name}`.
+- `{job_no}` remained literal and should not be used.
+- `{job_number}` resolved to the current job number in both email and SMS drafts.
+- Sent email activity changed to opened after the controlled recipient opened it.
+- The controlled SMS was accepted and reduced the allowance.
+
+<Note>
+  SMS content and recipient numbers should be reviewed before sending. The current plan records a 150-character content limit and monthly allowance as important customer guidance; recheck the live product before publishing exact plan limits.
+</Note>

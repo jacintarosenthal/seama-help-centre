@@ -1,0 +1,61 @@
+---
+title: "Upload and review a supplier bill"
+description: "Process an invoice or receipt, validate OCR against the source, save, reload and mark it Ready only when correct."
+sidebarTitle: "Upload and review a bill"
+icon: "scan-text"
+category: "Suppliers and Bills"
+subcategory: "Bills and document reader"
+pageType: "How-to"
+audience: ["Accounts staff", "Inventory staff", "Administrator"]
+prerequisites: ["Document upload and edit permissions", "A readable supplier invoice or receipt", "Relevant supplier, account and tax information"]
+lastVerified: "2026-08-26"
+reviewDate: "2026-09-26"
+productAreaOwner: "Bills owner to assign"
+keywords: ["upload invoice", "upload receipt", "OCR review", "To Review", "Ready", "email invoice to Seama"]
+relatedPages: ["/help/bills/import-items-to-stock", "/help/bills/send-a-bill-to-xero", "/help/bills/corrected-totals-changed"]
+---
+
+import VerifiedWeb from '/snippets/verified-web.mdx';
+
+<VerifiedWeb />
+
+## Before you begin
+
+- Use a clear source document and know the authoritative total.
+- Confirm the remaining monthly upload allowance. Email ingestion also consumed an allowance in testing.
+- Have the intended supplier, account, tax treatment and line destinations available.
+
+<Steps>
+  <Step title="Add the document">
+    Upload the file or email it to the tenant-specific inbound invoice address. Wait for processing and parsing to finish before editing.
+  </Step>
+  <Step title="Open the source and extracted data together">
+    Keep the document image visible while reviewing the extracted fields. Do not review from the Seama totals alone.
+  </Step>
+  <Step title="Validate document identity">
+    Compare supplier, ABN, invoice number, invoice date, due date, order references and address with the source.
+  </Step>
+  <Step title="Validate every line">
+    Compare product codes, descriptions, quantities, unit costs, tax and line totals. Correct fabricated, blank or corrupted values.
+  </Step>
+  <Step title="Validate accounting totals">
+    Compare net, GST or tax, adjustments and final total with the source. Choose the intended Xero account and add an internal note for material corrections.
+  </Step>
+  <Step title="Choose line destinations">
+    Decide whether lines belong in inventory, on a job card, or are split. Make this decision before import locks processed rows.
+  </Step>
+  <Step title="Save, reload and compare again">
+    Save the changes, reload the bill and repeat the source-total comparison. Do not rely on the pre-save preview.
+  </Step>
+  <Step title="Mark the bill Ready">
+    Change **To Review** to **Ready** only when the reloaded record matches the source and all required supplier, account and destination decisions are complete.
+  </Step>
+</Steps>
+
+<Warning>
+  A photographed receipt in testing misread GST, total, date, address, ABN, product codes and descriptions. Another correction previewed the right total but reloaded incorrectly because a GST adjustment was applied again. Always perform the reload check.
+</Warning>
+
+## Emailed documents and duplicates
+
+An emailed attachment successfully created a **To Review** record and used one upload allowance. Duplicate behavior was inconsistent for a repeated invoice number, so inspect supplier, number, date and total before accepting or resending a document.
